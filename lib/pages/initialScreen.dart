@@ -5,6 +5,7 @@ import 'package:store_responsive_dashboard/components/table_test.dart';
 import 'package:store_responsive_dashboard/constaints.dart';
 import 'package:store_responsive_dashboard/layout/main_layout.dart';
 import 'package:store_responsive_dashboard/pages/dashboard.dart';
+import 'package:store_responsive_dashboard/pages/main_search/main_search_screen.dart';
 import 'package:store_responsive_dashboard/pages/table/user.dart';
 import '../components/order_table.dart';
 
@@ -23,6 +24,15 @@ class _InitialScreenState extends State<InitialScreen> {
     UserTable(),
     Container(),
     Container(),
+    MainSearchScreen(),
+  ];
+
+  List titles = [
+    "Dashboard",
+    "Donatur",
+    "Container",
+    "Container",
+    "Cari",
   ];
   
   setCurrentIndex(index) {
@@ -34,6 +44,7 @@ class _InitialScreenState extends State<InitialScreen> {
   @override
   Widget build(BuildContext context) {
     return MainLayout(
+      title: titles[_currentIndex],
       child: mainScreens[_currentIndex],
       setCurrentIndex: setCurrentIndex,
     );
