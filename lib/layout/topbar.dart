@@ -3,9 +3,11 @@ import 'package:store_responsive_dashboard/constaints.dart';
 import 'package:store_responsive_dashboard/pages/dashboard.dart';
 
 class TopBar extends StatelessWidget {
-  final bool showDesktop;
-  final int currentIndex;
-  const TopBar({required this.currentIndex,   this.showDesktop = false});
+
+  final Function setCurrentPageIndex;
+  final String title;
+  const TopBar({Key? key, required this.setCurrentPageIndex, required this.title}) : super(key: key);
+
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +24,9 @@ class TopBar extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.only(bottom: 8),
                   child: Text(
-                    PageTopBar[currentIndex],
+
+                    title,
+
                     style: TextStyle(fontSize: 24, fontWeight: FontWeight.w600),
                   ),
                 ),
@@ -46,7 +50,9 @@ class TopBar extends StatelessWidget {
                 Icons.search,
                 color: Theme.of(context).primaryColor,
               ),
-              onPressed: () {},
+              onPressed: () {
+                setCurrentPageIndex(4);
+              },
             ),
             IconButton(
               icon: Icon(
