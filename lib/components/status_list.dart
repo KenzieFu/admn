@@ -6,10 +6,12 @@ import 'package:store_responsive_dashboard/widgets/status_card.dart';
 import '../constaints.dart';
 
 final List<BussinessStatus> statusList = [
+
   BussinessStatus('Profit Lelang', 'Rp 1.234.567.556', Icons.show_chart_outlined),
   BussinessStatus('Total Loan', 'Rp 2.238.324.567', Icons.attach_money_outlined),
   BussinessStatus('Market Store', '337', Icons.shopping_cart_outlined),
   BussinessStatus('Donatur', '10', Icons.people_outline_outlined),
+
 ];
 
 class StatusList extends StatelessWidget {

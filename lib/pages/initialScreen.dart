@@ -46,6 +46,7 @@ class _InitialScreenState extends State<InitialScreen> {
     return MainLayout(
       title: titles[_currentIndex],
       child: mainScreens[_currentIndex],
+      currentIndex:_currentIndex,
       setCurrentIndex: setCurrentIndex,
     );
   }
