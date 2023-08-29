@@ -7,9 +7,15 @@ import '../constaints.dart';
 
 class MainLayout extends StatelessWidget {
   final Widget child;
-  
+
   final void Function(int) setCurrentIndex;
-  MainLayout({Key? key, required this.child, required this.setCurrentIndex}) : super(key: key);
+  final int currentIndex;
+  MainLayout(
+      {Key? key,
+      required this.child,
+      required this.setCurrentIndex,
+      required this.currentIndex})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +29,10 @@ class MainLayout extends StatelessWidget {
           Expanded(
             child: Column(
               children: [
-                TopBar(_showDesktop),
+                TopBar(
+                  currentIndex: currentIndex,
+                  showDesktop: _showDesktop,
+                ),
                 Expanded(
                     child: SingleChildScrollView(
                         child: Padding(

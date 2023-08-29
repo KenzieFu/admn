@@ -3,8 +3,9 @@ import 'package:store_responsive_dashboard/constaints.dart';
 import 'package:store_responsive_dashboard/pages/dashboard.dart';
 
 class TopBar extends StatelessWidget {
-  final bool _showDesktop;
-  const TopBar([this._showDesktop = false]);
+  final bool showDesktop;
+  final int currentIndex;
+  const TopBar({required this.currentIndex,   this.showDesktop = false});
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +22,7 @@ class TopBar extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.only(bottom: 8),
                   child: Text(
-                    'Dashboard',
+                    PageTopBar[currentIndex],
                     style: TextStyle(fontSize: 24, fontWeight: FontWeight.w600),
                   ),
                 ),

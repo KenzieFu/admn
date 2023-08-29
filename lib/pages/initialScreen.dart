@@ -35,6 +35,7 @@ class _InitialScreenState extends State<InitialScreen> {
   Widget build(BuildContext context) {
     return MainLayout(
       child: mainScreens[_currentIndex],
+      currentIndex:_currentIndex,
       setCurrentIndex: setCurrentIndex,
     );
   }

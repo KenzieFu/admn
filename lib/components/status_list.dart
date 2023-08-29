@@ -6,10 +6,10 @@ import 'package:store_responsive_dashboard/widgets/status_card.dart';
 import '../constaints.dart';
 
 final List<BussinessStatus> statusList = [
-  BussinessStatus('Total Transaction', '1123456 \$', Icons.show_chart_outlined),
-  BussinessStatus('Total Loan', '11234 \$', Icons.attach_money_outlined),
-  BussinessStatus('Total Items', '1236', Icons.shopping_cart_outlined),
-  BussinessStatus('Active Users', '11234', Icons.people_outline_outlined),
+  BussinessStatus('Total Transaksi', '1123456 \$', Icons.show_chart_outlined),
+  BussinessStatus('Total Pinjaman', '11234 \$', Icons.attach_money_outlined),
+  BussinessStatus('Total Barang', '1236', Icons.shopping_cart_outlined),
+  BussinessStatus('Pengguna Aktif', '11234', Icons.people_outline_outlined),
 ];
 
 class StatusList extends StatelessWidget {
